@@ -1,0 +1,135 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "JobSet",
+  "description": "JobGen leverages Large Language Models to generate synthetic Online Job Advertisements, using real data and the ESCO taxonomy.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Colombo, S., D'Amico, S., Malandri, L., Mercorio, F., & Seveso, A. (2024). JobSet (1.0.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.11484885",
+  "license": "Creative Commons Attribution 4.0 International",
+  "url": "https://zenodo.org/records/11484885",
+  "version": "1.0.1",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "JobSet.csv",
+      "name": "JobSet.csv",
+      "description": "CSV file containing the job advertisement dataset JobSet.",
+      "contentUrl": "JobSet.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "a4dd829f0c419942e8de3a11ecc41a36b7457ac82bcc8d00396ea79263efa39b"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "job-ads",
+      "name": "job-ads",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "job_ad",
+          "name": "job_ad",
+          "description": "Text of the job advertisement.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "JobSet.csv"
+            },
+            "extract": {
+              "column": "job_ad"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "esco_id",
+          "name": "esco_id",
+          "description": "ESCO ID corresponding to the job advertisement.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "JobSet.csv"
+            },
+            "extract": {
+              "column": "esco_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "esco_label",
+          "name": "esco_label",
+          "description": "Label or title associated with the ESCO ID.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "JobSet.csv"
+            },
+            "extract": {
+              "column": "esco_label"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "esco_skills",
+          "name": "esco_skills",
+          "description": "Skills associated with the job advertisement.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileSet": {
+              "@id": "JobSet.csv"
+            },
+            "extract": {
+              "column": "esco_skills"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
