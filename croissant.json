@@ -48,7 +48,7 @@
   "name": "JobSet",
   "description": "JobGen leverages Large Language Models to generate synthetic Online Job Advertisements, using real data and the ESCO taxonomy.",
   "conformsTo": "http://mlcommons.org/croissant/1.0",
-  "citeAs": "Colombo, S., D'Amico, S., Malandri, L., Mercorio, F., & Seveso, A. (2024). JobSet (1.0.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.11484885",
+  "citeAs": "ANONYMOUS ET AL.",
   "license": "Creative Commons Attribution 4.0 International",
   "url": "https://zenodo.org/records/11484885",
   "version": "1.0.1",
