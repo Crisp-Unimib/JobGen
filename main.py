@@ -44,7 +44,7 @@ def main(do_only_occupation_starting_with):
 
     s3 = boto3.client('s3', aws_access_key_id='ACCESS_KEY',
                       aws_secret_access_key='SECRET_KEY')
-    bucket_name = 'crisp-projects-llm-benchmark'
+    bucket_name = 'your.bucket.here'
     data_path = os.path.dirname(os.path.abspath(
         __file__))  # TODO da standardizzare
     emb_model_name = "BAAI/bge-large-en-v1.5"
