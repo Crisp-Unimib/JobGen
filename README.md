@@ -5,7 +5,7 @@ Generating Synthetic Job Ads through LLMs
 This repo contains code for JobGen. If you like this paper, please cite us:
 
 ```
-
+Samuele Colombo, Simone D’Amico, Lorenzo Malandri, Fabio Mercorio, and Andrea Seveso. 2025. JobSet: Synthetic Job Advertisements Dataset for Labour Market Intelligence. In Proceedings of ACM SAC Conference (SAC’25).
 ```
 
 ## What this repo contains
